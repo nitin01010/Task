@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
-    <div className='flex justify-center   flex-wrap sm:flex-nowrap gap-3  m-3'>
+    <div className=' flex flex-wrap gap-3 lg:flex-nowrap m-2  lg:m-12  lg:p-4 '>
       <CardRight />
       <CardLeft />
       <ToastContainer />

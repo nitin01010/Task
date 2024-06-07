@@ -56,28 +56,25 @@ const CardRight = () => {
     }
 
     return (
-        <div className=' min-w-[41%] w-[100%] md:w-[41%] p-3'>
-            <img src={ Logo } className=' object-cover w-72' />
-            <br />
-            <h2 className=' text-lg md:text-2xl font-medium mt-3'>Suite Of Business Support Services</h2>
-            <br />
-            <p className=' mb-3 mt-2'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        <div className='w-[100%] text-center md:text-start transition-all ease-in-out delay-150  lg:w-[50%]'>
+            <img src={ Logo } className=' object-cover w-60 m-auto md:m-0   lg:w-80   mt-9 ' />
+            <h2 className=' text-[#112949] text-base  md:text-3xl  mt-7 font-semibold  md:font-normal '>Suite Of Business Support Services</h2>
+            <p className=' mt-12 text-[#112949]'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
             </p>
-            <br />
-            <span className=' flex gap-4 flex-wrap'>
+            <span className=' flex gap-4 mt-8 mb-4 flex-wrap'>
                 <input
                     type="email"
                     name="email"
                     value={ input.email }
                     onChange={ (e) => Handler(e) }
-                    className='border-gray-400 border p-3 w-[98%] md:w-[300px] outline-none rounded'
+                    className=' p-3 border rounded outline-none bg-slate-50 w-[100%] lg:w-[414px]'
                     required
                     minLength={ 6 }
                     placeholder='Email Address'
                 />
                 <button
-                    className='p-2 py-3 rounded w-[98%] md:w-auto text-white bg-[#EA7B2C] hover:bg-[#f99a57]'
+                    className=' p-3 w-[100%]  lg:w-[120px] text-white bg-[#EA7B2C] rounded-md '
                     onClick={ () => HandlerSubmit() }
                 >
                     Contact Me

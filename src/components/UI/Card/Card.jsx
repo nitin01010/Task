@@ -1,17 +1,18 @@
 import React from 'react'
 import Logo from "../../../Images/Research@4x.png";
 
-const Card = () => {
+const Card = ({ title }) => {
     return (
-        <div className=' bg-[#112949]  w-[300px] max-w-[311px] min-h-[200px] rounded-sm text-white p-3 '>
-            <div className=' flex justify-start gap-3 items-center '>
-                <img src={ Logo } alt='logo' />
-                <h3 className=' text-[#3CC3F2] font-medium'>Presentation Design</h3>
+        <div className=' text-white cursor-pointer bg-[rgb(17,41,73)] p-4 rounded-lg w-[311px] min-w-[311px]   min-h-[254px] ' >
+            <div className='flex gap-4 items-center '>
+                <img src={ Logo } />
+                <p>{ title }</p>
             </div>
-            <p className=' font-light mt-2'>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                Lorem ipsum dolor sit amet consectetur adipisicing
-            </p>
+            <div className='mt-5'>
+                <p>
+                    Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                </p>
+            </div>
         </div>
     )
 }

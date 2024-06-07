@@ -17,13 +17,22 @@ const CardRight = () => {
         return re.test(String(email).toLowerCase());
     };
 
+
+
     const Handler = (e) => {
         let { value, name } = e.target;
         setinput(values => ({ ...values, [name]: value }));
         setErrors(values => ({ ...values, [name]: '' }));
     }
 
-    const HandlerSubmit = () => {
+    const HandlerSendApi = async () => {
+        const { email } = input;
+        const response = await axios.post("http://34.225.132.160:8002/api", { email });
+        const result = response.data;
+        return result;
+    }
+
+    const HandlerSubmit = async () => {
         let valid = true;
         let newErrors = { email: '' };
 
@@ -36,8 +45,10 @@ const CardRight = () => {
         }
 
         if (valid) {
-            console.log(input);
-            toast.success(`Welcome ${input.email}`);
+            const newResult = await HandlerSendApi();
+            console.log(newResult);
+            const { message, } = newResult;
+            toast.success(message);
             setinput({ email: '' });
         } else {
             setErrors(newErrors);
